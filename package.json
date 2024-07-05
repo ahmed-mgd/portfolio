@@ -11,5 +11,11 @@
   },
   "dependencies": {
     "astro": "^4.11.5"
+  },
+  "build": {
+    "base": "/opt/build/repo/dist",
+    "command": "node_modules/.bin/astro build",
+    "commandOrigin": "ui",
+    "publishOrigin": "default"
   }
 }
