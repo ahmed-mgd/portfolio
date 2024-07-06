@@ -1,0 +1,22 @@
+---
+const { title, descOne, descTwo, descThree } = Astro.props;
+---
+
+<div class="role">
+  <h2 class="header">{title}</h2>
+  <ul class="role-description">
+    {[descOne, descTwo, descThree].map((line) => <li>{line}</li>)}
+  </ul>
+</div>
+
+<style>
+    .role {
+        border: 2px solid;
+        padding: 2rem;
+    }
+    .role-title {
+    }
+    .role-description {
+        padding: 0.5rem 3rem;
+    }
+</style>

@@ -1,0 +1,41 @@
+---
+import headshot from "../assets/headshot.jpg";
+
+interface Props {
+  linkedin: string;
+  github: string;
+}
+
+const { linkedin, github } = Astro.props;
+---
+
+<div id="about">
+  <h1 id="greeting">Hi! I'm Ahmed.</h1>
+  <p>
+    I'm a fourth year student at the Ohio State University pursing a Computer
+    Science and Engineering degree with a specialization in <span
+      class="highlight"
+    >
+      Database Systems and Data Analytics
+    </span>. I've taken an interest in web development and I'm constantly
+    working to expand my skillset.
+  </p>
+  <p>
+    See some of my work below and feel free to get in touch with me. I look
+    forward to working with you!
+  </p>
+  <div id="socials"></div>
+</div>
+<div id="experience">
+  <h1 class="heading">Experience</h1>
+</div>
+
+<style>
+  #about {
+    background: var(--headshot);
+  }
+
+  #about * {
+    padding: 0.6rem 0;
+  }
+</style>

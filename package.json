@@ -10,12 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.5"
+    "astro": "^4.11.5",
+    "astro-imagetools": "^0.9.0"
   },
-  "build": {
-    "base": "/opt/build/repo/dist",
-    "command": "node_modules/.bin/astro build",
-    "commandOrigin": "ui",
-    "publishOrigin": "default"
+  "devDependencies": {
+    "prettier": "3.3.2",
+    "prettier-plugin-astro": "^0.14.0"
+  },
+  "pretter": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
   }
 }

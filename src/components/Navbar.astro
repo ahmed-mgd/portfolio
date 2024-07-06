@@ -1,0 +1,54 @@
+<nav id="navbar">
+  <div id="name">Ahmed Abdelmageed</div>
+  <a href="" id="nav-toggle"></a>
+  <div id="nav-links">
+    <ul>
+      <li><a href="#"></a>About</li>
+      <li><a href="#"></a>Projects</li>
+      <li><a href="#"></a>Contact</li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: rgba(0, 0, 0, 0.765);
+    color: white;
+  }
+
+  #name {
+    font-size: 1.6rem;
+  }
+
+  #nav-links > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  #nav-links li,
+  #nav-links a {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  #nav-links li:hover {
+    border-bottom: 2px solid;
+  }
+
+  #nav-toggle {
+  }
+
+  #sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+</style>
