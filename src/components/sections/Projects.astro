@@ -1,38 +1,81 @@
 ---
 import Heading from "../Heading.astro";
-import Card from "../Card.astro";
+import Project from "../Project.astro";
 ---
 
 <div id="projects">
   <Heading content="Projects" />
-  <div id="project-cards">
-    <Card
+  <div id="project-Projects">
+    <Project
       title="Battleship"
-      body="Web implementation of the classic board game &quot;Battleship.&quot;"
+      body='Web implementation of the classic board game "Battleship."'
       href="https://github.com/ahmed-mgd/battleship"
+      tools="JavaScript"
     />
-    <Card
+    <Project
       title="Tic Tac Toe"
       body="Implemented using vanilla JavaScript, emphasizing the module pattern and HTML forms."
       href="https://github.com/ahmed-mgd/tic-tac-toe"
+      tools="JavaScript"
     />
-    <Card
+    <Project
       title="Weather App"
       body="Application that reports the weather for a given city using WeatherAPI."
       href="https://github.com/ahmed-mgd/weather-app"
+      tools="JavaScript"
+    />
+    <Project
+      title="Etch-A-Sketch"
+      body="Sketching app using simple DOM manipulation."
+      href="https://github.com/ahmed-mgd/etch-a-sketch"
+      tools="JavaScript"
+    />
+    <Project
+      title="Presentation App"
+      body="Full-stack web app to aggregate peer feedback for student presentations."
+      href=""
+      tools="Ruby On Rails"
+    />
+    <Project
+      title="The Game of Set"
+      body='Native application implementing the card game "Set."'
+      href=""
+      tools="Ruby, GTK"
+    />
+    <Project
+      title="Tag Cloud Generator"
+      body="Program that generates a tag cloud from words in a text document."
+      href=""
+      tools="Java"
+    />
+    <Project
+      title="RSS News Reader"
+      body="Console program that reads an RSS 2.0 feed and organizes information into a webpage."
+      href=""
+      tools="Java"
     />
   </div>
 </div>
 
 <style>
   #projects {
-    background-color: rgb(200, 230, 230);
     padding: var(--section-padding);
   }
-    #project-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        flex-wrap: wrap;
+  #project-Projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 1200px) {
+    #project-Projects {
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
+
+  @media (max-width: 768px) {
+    #project-Projects {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

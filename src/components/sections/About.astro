@@ -1,13 +1,18 @@
 ---
 import { Image } from 'astro:assets';
-import headshot from "../../assets/abdelmageed-hs.jpg";
+
+import headshot from '../../assets/abdelmageed-hs.jpg';
+import emailLogo from '../../assets/email.svg'
+import githubLogo from '../../assets/github.svg'
+import linkedinLogo from '../../assets/linkedin.svg'
 
 interface Props {
+  email: string;
   linkedin: string;
   github: string;
 }
 
-const { linkedin, github } = Astro.props;
+const { email, linkedin, github } = Astro.props;
 ---
 
 <div id="about">
@@ -20,14 +25,24 @@ const { linkedin, github } = Astro.props;
         class="highlight"
       >
         Database Systems and Data Analytics
-      </span>. I've taken an interest in web development and I'm constantly
+      </span>. I've taken an interest in <span class="highlight">web development</span> and I'm constantly
       working to expand my skillset.
     </p>
     <p>
-      See some of my work below and feel free to get in touch with me. I look
+      See some of my work below and don't hesitate to get in touch with me. I look
       forward to working with you!
     </p>
-    <div id="socials"></div>
+    <div id="socials">
+      <a href={linkedin}>
+        <Image src={linkedinLogo} alt="LinkedIn" class="social" />
+      </a>
+      <a href={github}>
+        <Image src={githubLogo} alt="GitHub" class="social"/>
+      </a>
+      <a href={"mailto: " + email}>
+        <Image src={emailLogo} alt="Email" class="social"/>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -37,12 +52,21 @@ const { linkedin, github } = Astro.props;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 10rem 20% 6rem;
+    gap: 2rem;
+    padding: 10rem 10%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 6%,
+      rgba(23, 23, 152, 1) 78%,
+      rgba(22, 104, 172, 1) 100%
+    );
+    color: white;
   }
 
   #about p {
     padding: 0.6rem;
+    font-size: 1.15rem;
   }
 
   #about-content {
@@ -50,9 +74,43 @@ const { linkedin, github } = Astro.props;
   }
 
   #headshot {
-    width: 20%;
+    width: max(25%, 20rem);
     height: auto;
     border: medium solid black;
     border-radius: 50%;
+  }
+
+  #socials {
+    display: flex;
+    gap: 0.6rem;
+    padding-top: 2rem;
+  }
+  .social {
+    width: var(--social-width);
+    height: auto;
+  }
+
+  .highlight {
+    color: rgb(253, 190, 0);
+  }
+
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+      padding: 5rem 5%;
+    }
+
+    #headshot {
+      width: 50%;
+    }
+
+    #about-content {
+      width: 100%;
+      text-align: center;
+    }
+
+    #socials {
+      justify-content: center;
+    }
   }
 </style>

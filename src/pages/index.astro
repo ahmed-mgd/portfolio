@@ -14,8 +14,9 @@ const github = "https://github.com/ahmed-mgd";
 <Layout title="Ahmed A. | Portfolio">
   <Navbar />
   <main>
-    <About linkedin={linkedin} github={github} />
+    <About email={email} linkedin={linkedin} github={github} />
     <Projects />
+    <hr>
     <Experience />
     <Contact email={email} linkedin={linkedin} github={github} />
   </main>
@@ -23,6 +24,7 @@ const github = "https://github.com/ahmed-mgd";
 
 <style>
   :root {
-    --section-padding: 4rem 20%;
+    --section-padding: 6rem 20%;
+    --social-width: 2.5rem;
   }
 </style>
