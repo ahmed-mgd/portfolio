@@ -5,19 +5,19 @@ import About from "../components/sections/About.astro";
 import Experience from "../components/sections/Experience.astro";
 import Projects from "../components/sections/Projects.astro";
 import Contact from "../components/sections/Contact.astro";
-import headshot from "../assets/headshot.jpg";
+
+const email = "ahmedg.abdel@gmail.com";
+const linkedin = "https://www.linkedin.com/in/ahmed-abdelmageed-a7243b227/";
+const github = "https://github.com/ahmed-mgd";
 ---
 
 <Layout title="Ahmed A. | Portfolio">
   <Navbar />
   <main>
-    <About
-      linkedin="https://www.linkedin.com/in/ahmed-abdelmageed-a7243b227/"
-      github="https://github.com/ahmed-mgd"
-    />
+    <About linkedin={linkedin} github={github} />
     <Projects />
     <Experience />
-    <Contact />
+    <Contact email={email} linkedin={linkedin} github={github} />
   </main>
 </Layout>
 

@@ -2,11 +2,12 @@
 import Heading from "../Heading.astro";
 
 interface Props {
+    email: string;
   linkedin: string;
   github: string;
 }
 
-const { linkedin, github } = Astro.props;
+const { email, linkedin, github } = Astro.props;
 ---
 
 <div id="contact">
