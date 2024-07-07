@@ -1,25 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import About from "../components/About.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-import Contact from "../components/Contact.astro";
+import About from "../components/sections/About.astro";
+import Experience from "../components/sections/Experience.astro";
+import Projects from "../components/sections/Projects.astro";
+import Contact from "../components/sections/Contact.astro";
 import headshot from "../assets/headshot.jpg";
 ---
 
 <Layout title="Ahmed A. | Portfolio">
   <Navbar />
   <main>
-    <About linkedin="" github="" />
-    <Experience />
+    <About
+      linkedin="https://www.linkedin.com/in/ahmed-abdelmageed-a7243b227/"
+      github="https://github.com/ahmed-mgd"
+    />
     <Projects />
+    <Experience />
     <Contact />
   </main>
 </Layout>
 
 <style>
-  main {
-    padding: 3rem 20%;
+  :root {
+    --section-padding: 4rem 20%;
   }
 </style>

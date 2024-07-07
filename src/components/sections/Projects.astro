@@ -1,6 +1,6 @@
 ---
-import Heading from "./Heading.astro";
-import Card from "./Card.astro";
+import Heading from "../Heading.astro";
+import Card from "../Card.astro";
 ---
 
 <div id="projects">
@@ -25,6 +25,10 @@ import Card from "./Card.astro";
 </div>
 
 <style>
+  #projects {
+    background-color: rgb(200, 230, 230);
+    padding: var(--section-padding);
+  }
     #project-cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

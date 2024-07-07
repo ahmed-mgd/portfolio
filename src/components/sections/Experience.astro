@@ -1,10 +1,10 @@
 ---
-import Heading from "./Heading.astro";
-import Role from "./Role.astro";
+import Heading from "../Heading.astro";
+import Role from "../Role.astro";
 ---
 
 <div id="experience">
-  <Heading content="Experience"/>
+  <Heading content="Experience" />
   <Role
     title="Software I/II TA"
     location="Columbus, OH"
@@ -13,3 +13,9 @@ import Role from "./Role.astro";
     descThree="Communicate with instructor and fellow graders to coordinate responsibilities"
   />
 </div>
+
+<style>
+  #experience {
+    padding: var(--section-padding);
+  }
+</style>

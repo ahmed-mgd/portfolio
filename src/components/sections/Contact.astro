@@ -1,0 +1,22 @@
+---
+import Heading from "../Heading.astro";
+
+interface Props {
+  linkedin: string;
+  github: string;
+}
+
+const { linkedin, github } = Astro.props;
+---
+
+<div id="contact">
+  <Heading content="Contact" />
+</div>
+
+<style>
+  #contact {
+    padding: var(--section-padding);
+    background-color: rgb(65, 50, 200);
+    color: white;
+  }
+</style>

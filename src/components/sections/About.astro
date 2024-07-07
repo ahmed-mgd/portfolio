@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import headshot from "../assets/headshot.jpg";
+import headshot from "../../assets/abdelmageed-hs.jpg";
 
 interface Props {
   linkedin: string;
@@ -11,7 +11,7 @@ const { linkedin, github } = Astro.props;
 ---
 
 <div id="about">
-  <Image src={headshot} width="200" height="150" alt="Headshot" />
+  <Image src={headshot} alt="Headshot" id="headshot" />
   <div id="about-content">
     <h1 id="greeting">Hi! I'm Ahmed.</h1>
     <p>
@@ -37,9 +37,22 @@ const { linkedin, github } = Astro.props;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10rem 20% 6rem;
   }
 
   #about p {
     padding: 0.6rem;
+  }
+
+  #about-content {
+    width: 80%;
+  }
+
+  #headshot {
+    width: 20%;
+    height: auto;
+    border: medium solid black;
+    border-radius: 50%;
   }
 </style>
