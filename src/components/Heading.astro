@@ -1,0 +1,15 @@
+---
+interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+---
+
+<h1 class="heading">{content}</h1>
+
+<style>
+  .heading {
+    padding: 1rem 0;
+  }
+</style>

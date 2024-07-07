@@ -1,0 +1,34 @@
+---
+import Heading from "./Heading.astro";
+import Card from "./Card.astro";
+---
+
+<div id="projects">
+  <Heading content="Projects" />
+  <div id="project-cards">
+    <Card
+      title="Battleship"
+      body="Web implementation of the classic board game &quot;Battleship.&quot;"
+      href="https://github.com/ahmed-mgd/battleship"
+    />
+    <Card
+      title="Tic Tac Toe"
+      body="Implemented using vanilla JavaScript, emphasizing the module pattern and HTML forms."
+      href="https://github.com/ahmed-mgd/tic-tac-toe"
+    />
+    <Card
+      title="Weather App"
+      body="Application that reports the weather for a given city using WeatherAPI."
+      href="https://github.com/ahmed-mgd/weather-app"
+    />
+  </div>
+</div>
+
+<style>
+    #project-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+</style>

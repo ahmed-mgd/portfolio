@@ -1,22 +1,29 @@
 ---
-const { title, descOne, descTwo, descThree } = Astro.props;
+const { title, location, descOne, descTwo, descThree } = Astro.props;
 ---
 
 <div class="role">
-  <h2 class="header">{title}</h2>
+  <h2 class="role-title">{title} <span class="role-location">&mdash; {location}</span></h2>
   <ul class="role-description">
     {[descOne, descTwo, descThree].map((line) => <li>{line}</li>)}
   </ul>
 </div>
 
 <style>
-    .role {
-        border: 2px solid;
-        padding: 2rem;
-    }
-    .role-title {
-    }
-    .role-description {
-        padding: 0.5rem 3rem;
-    }
+  .role {
+    border: 2px solid;
+    border-radius: 7px;
+    padding: 1.5rem;
+  }
+  .role-title {
+  }
+  .role-location {
+    padding: 0.1rem 0;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  .role-description {
+    padding: 0.5rem 3rem;
+  }
 </style>
