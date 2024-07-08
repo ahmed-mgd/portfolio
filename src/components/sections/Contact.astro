@@ -56,4 +56,11 @@ const { email, linkedin, github } = Astro.props;
     width: var(--social-width);
     height: auto;
   }
+
+  @media (max-width: 768px) {
+    #contact-socials {
+      padding: 0;
+      margin: auto;
+    }
+  }
 </style>
