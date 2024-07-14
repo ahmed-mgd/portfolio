@@ -1,7 +1,9 @@
 # Portfolio
 
 Personal portfolio showcasing development experience: https://ahmed-mgd.netlify.app.
-Created using plain HTML/CSS and Astro for static site generation.
+
+Created using Astro (HTML/CSS).
+
 ![screenshot](public/sc.png)
 
 ## Installation and Usage
