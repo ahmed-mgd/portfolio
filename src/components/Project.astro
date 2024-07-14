@@ -8,21 +8,19 @@ interface Props {
 
 const { href, title, body, tools } = Astro.props;
 
-let linkArrow = "&nearr;";
-if (href.length === 0) {
-  linkArrow = ""
-} 
+const hasLink = href.length > 0;
 ---
 
 <div class="link-card">
   <a href={href}>
     <h2>
       {title}
-      <span set:html={linkArrow} />
+      {hasLink && <span>&nearr;</span>}
     </h2>
     <p>
       {body}
     </p>
+    <p class="tools">{tools}</p>
   </a>
 </div>
 <style>
@@ -61,5 +59,10 @@ if (href.length === 0) {
   }
   .link-card:is(:hover, :focus-within) h2 {
     color: rgb(180, 129, 228);
+  }
+  .tools {
+    font-size: 0.9rem;
+    font-style: italic;
+    padding: 0.9rem 0 0;
   }
 </style>
