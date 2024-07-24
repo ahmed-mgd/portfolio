@@ -18,8 +18,8 @@ const { email, linkedin, github } = Astro.props;
 <div id="contact">
   <Heading content="Contact" />
   <div id="contact-socials">
-    <a href={email} class="contact-social">
-      <Image src={emailLogo} alt="LinkedIn" class="social-icon" />
+    <a href={"mailto: " + email} class="contact-social">
+      <Image src={emailLogo} alt="Email" class="social-icon" />
       <p>ahmedg.abdel@gmail.com</p>
     </a>
     <a href={linkedin} class="contact-social">
