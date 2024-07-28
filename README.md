@@ -21,3 +21,4 @@ npm run dev
 
 - Configuring Astro and using components
 - Practice with responsive web design
+- Simple CSS animations, gradients, etc.
