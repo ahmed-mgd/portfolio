@@ -35,10 +35,10 @@ const { email, linkedin, github } = Astro.props;
       </p>
     </div>
     <div id="socials">
-      <a href={linkedin}>
+      <a href={linkedin} target="_blank">
         <Image src={linkedinLogo} alt="LinkedIn" class="social" />
       </a>
-      <a href={github}>
+      <a href={github} target="_blank">
         <Image src={githubLogo} alt="GitHub" class="social"/>
       </a>
       <a href={"mailto: " + email}>

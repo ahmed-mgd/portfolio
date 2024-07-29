@@ -61,21 +61,11 @@ import Project from "../Project.astro";
   #projects {
     padding: var(--section-padding);
   }
+
   #project-Projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    flex-wrap: wrap;
-  }
-  @media (max-width: 1200px) {
-    #project-Projects {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 768px) {
-    #project-Projects {
-      grid-template-columns: 1fr;
-    }
+    justify-content: center;
   }
 </style>
