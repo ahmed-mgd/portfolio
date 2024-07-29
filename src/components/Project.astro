@@ -8,7 +8,7 @@ interface Props {
 
 const { href, title, body, tools } = Astro.props;
 
-const hasLink = href.length > 0;
+const hasLink = href !== "#0";
 ---
 
 <div class="link-card">
