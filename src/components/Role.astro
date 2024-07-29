@@ -11,19 +11,52 @@ const { title, location, descOne, descTwo, descThree } = Astro.props;
 
 <style>
   .role {
-    border: 2px solid;
+    border: 2px solid #ccc;
     border-radius: 7px;
-    padding: 1.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+
   .role-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
+
   .role-location {
-    padding: 0.1rem 0;
     font-style: italic;
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: #555;
   }
+
   .role-description {
-    padding: 0.5rem 3rem;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .role-description li {
+    padding: 0.5rem 0;
+    border-top: 1px solid #eee;
+  }
+
+  .role-description li:first-child {
+    border-top: none;
+  }
+
+  @media (max-width: 600px) {
+    .role-title {
+      font-size: 1.2rem;
+    }
+
+    .role-location {
+      font-size: 0.9rem;
+    }
+
+    .role {
+      padding: 1rem;
+    }
   }
 </style>
