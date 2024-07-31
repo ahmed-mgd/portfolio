@@ -1,10 +1,10 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import headshot from '../../assets/abdelmageed-hs.jpg';
-import emailLogo from '../../assets/email.svg'
-import githubLogo from '../../assets/github.svg'
-import linkedinLogo from '../../assets/linkedin.svg'
+import headshot from "../../assets/abdelmageed-hs.jpg";
+import emailLogo from "../../assets/email.svg";
+import githubLogo from "../../assets/github.svg";
+import linkedinLogo from "../../assets/linkedin.svg";
 
 interface Props {
   email: string;
@@ -21,17 +21,16 @@ const { email, linkedin, github } = Astro.props;
     <h1 id="greeting">Hi! I'm Ahmed.</h1>
     <div id="desc">
       <p>
-        I'm a fourth year student at the Ohio State University pursing a Computer
-        Science and Engineering degree with a specialization in <span
-          class="highlight"
-        >
-          Database Systems and Data Analytics
-        </span>. I've taken an interest in <span class="highlight">web development</span> and I'm constantly
-        working to expand my skillset.
+        I'm a fourth year student at the Ohio State University pursing a
+        Computer Science and Engineering degree with a specialization in <span
+          class="highlight">Database Systems and Data Analytics</span
+        >. I've taken an interest in <span class="highlight"
+          >web development</span
+        > and I'm constantly working to expand my skillset.
       </p>
       <p>
-        See some of my work below and don't hesitate to get in touch with me. I look
-        forward to working with you!
+        See some of my work below and don't hesitate to get in touch with me. I
+        look forward to working with you!
       </p>
     </div>
     <div id="socials">
@@ -39,10 +38,10 @@ const { email, linkedin, github } = Astro.props;
         <Image src={linkedinLogo} alt="LinkedIn" class="social" />
       </a>
       <a href={github} target="_blank">
-        <Image src={githubLogo} alt="GitHub" class="social"/>
+        <Image src={githubLogo} alt="GitHub" class="social" />
       </a>
       <a href={"mailto: " + email}>
-        <Image src={emailLogo} alt="Email" class="social"/>
+        <Image src={emailLogo} alt="Email" class="social" />
       </a>
     </div>
   </div>
